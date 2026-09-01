@@ -7,10 +7,11 @@ fs.stat("notes.txt",(err,stats)=>{
     }
     console.log("Information of [notes.txt]",stats);
     console.log("Size of the file: ",stats.size);
-    console.log("Created on: ",stats.birthtime);
+    console.log("Created on: ",stats.birthtime.toISOString().split("T")[0]);
     console.log("Modification of the file : ",stats.mtime);
     console.log("Access time of the file : ",stats.atime);
     console.log("Change time of the file : ",stats.ctime);
 
+    console.log("Is this is a file : ",stats.isFile())
 
 });
