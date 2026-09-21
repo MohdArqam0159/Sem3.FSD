@@ -1,6 +1,6 @@
 import fs from 'fs'
 
-fs.stat("notes.txt",(err,stats)=>{
+fs.stat("notes.txt",(err,stats)=>{                     //Anonymous function
     if(err){
         console.log(err);
         return;
@@ -13,5 +13,7 @@ fs.stat("notes.txt",(err,stats)=>{
     console.log("Change time of the file : ",stats.ctime);
 
     console.log("Is this is a file : ",stats.isFile())
+
+  
 
 });
